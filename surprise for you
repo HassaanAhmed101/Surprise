@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Valentine's Day ❤</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(45deg, #ff9a9e, #fad0c4);
+            text-align: center;
+            margin: 0;
+            padding: 50px;
+            overflow: hidden;
+        }
+        .container {
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+            display: inline-block;
+            max-width: 500px;
+            animation: fadeIn 1.5s ease-in-out;
+            position: relative;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(-20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        .popup {
+            display: none;
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+            width: 300px;
+            margin: 20px auto;
+        }
+        .popup img {
+            width: 100%;
+            border-radius: 10px;
+        }
+        .popup button {
+            margin-top: 10px;
+            padding: 8px 15px;
+            border: none;
+            background: #e6005c;
+            color: white;
+            cursor: pointer;
+        }
+        .popup button:hover {
+            background: #b30047;
+        }
+    </style>
+</head>
+<body>
+    <div class="container" id="mainContainer">
+        <h1>Happy Valentine's Day from Your Haan❤</h1>
+        <p>This special wish is just for you! 💖</p>
+        <button class="btn" onclick="showPopup('popup1')">Open Gift 🎁</button>
+        
+        <div class="popup" id="popup1">
+            <h2>You're My Forever Love 💖</h2>
+            <img src="C:\Users\MR.Laptops\Downloads\WhatsApp Image 2025-02-13 at 21.30.20_136b05ca.jpg" alt="Love Image 1">
+            <p>Parkha Love You so much.</p>
+            <button onclick="nextPopup('popup1', 'popup2')">Next 💕</button>
+        </div>
+        
+        <div class="popup" id="popup2">
+            <h2>I Love You So Much! 💕</h2>
+            <img src="C:\Users\MR.Laptops\Downloads\WhatsApp Image 2025-02-13 at 21.30.40_3472f4e1.jpg" alt="Love Image 2">
+            <p>You make my life so special and amazing or sudhar bhi diya thanks alot parkha for every thing.</p>
+            <button onclick="nextPopup('popup2', 'popup3')">Next 💘</button>
+        </div>
+        
+        <div class="popup" id="popup3">
+            <h2>Forever and Always! ❤️</h2>
+            <img src="C:\Users\MR.Laptops\Downloads\WhatsApp Image 2025-02-13 at 21.31.05_d6426fbc.jpg" alt="Love Image 3">
+            <p>Happy Valentine's Day Parkha jani, Meri jani meri chikni pali jan chota sa wish ap kai haan ki taraf sai, just for you! 💕</p>
+            <button onclick="closePopups()">Aww! 💖</button>
+        </div>
+    </div>
+
+    <script>
+        function showPopup(id) {
+            document.getElementById(id).style.display = "block";
+        }
+        
+        function nextPopup(currentId, nextId) {
+            document.getElementById(currentId).style.display = "none";
+            document.getElementById(nextId).style.display = "block";
+        }
+        
+        function closePopups() {
+            document.getElementById("popup1").style.display = "none";
+            document.getElementById("popup2").style.display = "none";
+            document.getElementById("popup3").style.display = "none";
+            alert("Happy Valentine's Day, my love meri jani! This wish is from haan to meri pyari Parkha! ❤");
+        }
+    </script>
+</body>
+</html>
